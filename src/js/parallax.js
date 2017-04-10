@@ -283,6 +283,7 @@ function ParallaxRenderer() {
                     currentSettings = $.fn.parallaxCore.scrollDefault[i].data("parallaxSettings");
                     
                     currentSettings.start = currentElement.offset().top - $(window).height();
+                    currentSettings.end   = currentElement.height() + currentElement.offset().top;
                     
                     $.fn.parallaxCore.scrollDefault[i].data("parallaxSettings", currentSettings);
                 }
@@ -293,6 +294,7 @@ function ParallaxRenderer() {
                     currentSettings = $.fn.parallaxCore.scrollManual[i].data("parallaxSettings");
                     
                     currentSettings.start = currentElement.offset().top - $(window).height();
+                    currentSettings.end   = currentElement.height() + currentElement.offset().top;
                     
                     $.fn.parallaxCore.scrollManual[i].data("parallaxSettings", currentSettings);
                 }
